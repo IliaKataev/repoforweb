@@ -28,8 +28,8 @@ function open() { emit('open'); }
 
 const attachmentsCount = computed(() => props.hw?.attachments?.length || 0);
 
-function formatDate(date) { return date; } // можно добавить норм. формат
-function downloadAll() { alert('Скачать все файлы'); } // реализация скачивания
+function formatDate(date) { return date; }
+function downloadAll() { alert('Скачать все файлы'); }
 </script>
 
 <style scoped>

@@ -49,7 +49,7 @@ const course = ref(null);
 onMounted(async () => {
   try {
     console.log('courseId:', courseId);
-    const { data } = await getCourses(); // получаем все курсы
+    const { data } = await getCourses();
     console.log('all courses:', data.result);
 
     if (Array.isArray(data.result)) {
