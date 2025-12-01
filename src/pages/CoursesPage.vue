@@ -14,7 +14,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import { getCourses } from '../api/courses';
+import {getCourses, getCoursesForUser} from '../api/courses';
 import { useRouter } from 'vue-router';
 import CourseCard from '../components/CourseCard.vue';
 
@@ -24,6 +24,7 @@ const router = useRouter();
 onMounted(async () => {
   try {
     const res = await getCourses();
+    console.log(res.data);
     courses.value = res.data.result;
   } catch (e) {
     console.error('Ошибка загрузки курсов:', e);
