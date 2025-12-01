@@ -1,17 +1,13 @@
 <template>
   <div class="lesson-page" v-if="lesson">
-    <!-- Название урока -->
     <h2 class="lesson-title">{{ lesson.name }}</h2>
 
-    <!-- Описание / контент -->
     <div v-if="lesson.content" class="lesson-content" v-html="lesson.content.TEXT || lesson.content"></div>
 
-    <!-- Видео -->
     <div v-if="lesson.video" class="lesson-video">
       <video controls :src="lesson.video"></video>
     </div>
 
-    <!-- Материалы -->
     <div v-if="lesson.materials?.length" class="lesson-materials">
       <h3>Материалы</h3>
       <ul>
@@ -21,7 +17,6 @@
       </ul>
     </div>
 
-    <!-- Домашние задания -->
     <h3 class="hw-heading">Домашние задания</h3>
     <div class="hw-list">
       <div v-for="hw in lesson.homework || []" :key="hw.id" class="hw-card"

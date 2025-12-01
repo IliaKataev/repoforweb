@@ -10,10 +10,8 @@
       <img v-if="course.image" :src="course.image" alt="Course image" class="course-image" />
     </div>
 
-    <!-- Описание курса -->
     <div v-if="course.description" class="course-description" v-html="course.description.TEXT || course.description"></div>
 
-    <!-- Уроки -->
     <h2 class="lessons-heading">Лекции</h2>
     <div class="lessons-list">
       <LessonCard

@@ -12,3 +12,7 @@ export function createCourse(data) {
     return api.post("Course/create/", data);
 }
 
+
+export function getCoursesForUser() {
+    return api.get("User/getCoursesForUser/");
+}
